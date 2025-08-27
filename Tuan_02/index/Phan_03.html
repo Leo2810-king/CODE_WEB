@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 3: Biểu mẫu nâng cao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f4f6f9;
+        }
+        
+        .form-section {
+            margin: 32px auto 32px auto;
+            width: 60%;
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            padding: 25px 25px 18px 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px #b0c4de55;
+            transition: box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .form-section:hover {
+            box-shadow: 0 8px 32px #b0c4de99;
+        }
+        
+        .form-section h2 {
+            text-align: center;
+            color: #2d5c88;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        form {
+            margin: 0 auto 0 auto;
+            width: 100%;
+            max-width: 500px;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 97%;
+            padding: 10px;
+            margin: 7px 0 15px 0;
+            border-radius: 7px;
+            border: 1px solid #b0c4de;
+            font-size: 1em;
+            background: #fafdff;
+            transition: border 0.2s;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border: 1.5px solid #3498db;
+            outline: none;
+        }
+        
+        button {
+            align-self: center;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 7px;
+            background: linear-gradient(90deg, #3498db 60%, #6dd5fa 100%);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #b0c4de55;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            background: linear-gradient(90deg, #2980b9 60%, #3498db 100%);
+            box-shadow: 0 4px 16px #b0c4de99;
+        }
+        
+        label {
+            font-size: 1em;
+            color: #2d5c88;
+            text-align: left;
+        }
+        
+        textarea {
+            min-height: 60px;
+            text-align: left;
+        }
+        
+        @media (max-width: 700px) {
+            .form-section {
+                width: 95%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="form-section">
+        <h2>🔑 Form đăng nhập</h2>
+        <form>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+    </div>
+
+    <div class="form-section">
+        <h2>📋 Form khảo sát ý kiến</h2>
+        <form>
+            <p>Bạn thích môn học nào?</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-bottom: 10px;">
+                <label style="width: 100%;"><input type="radio" name="mon"> Lập trình Web</label>
+                <label style="width: 100%;"><input type="radio" name="mon"> Cơ sở dữ liệu</label>
+            </div>
+            <p>Bạn quan tâm lĩnh vực nào?</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-bottom: 10px;">
+                <label style="width: 100%;"><input type="checkbox"> AI</label>
+                <label style="width: 100%;"><input type="checkbox"> Mạng</label>
+            </div>
+            <textarea placeholder="Ý kiến khác..."></textarea><br>
+            <button>Gửi</button>
+        </form>
+    </div>
+
+    <div class="form-section">
+        <h2>🍽️ Form đặt bàn quán ăn</h2>
+        <form>
+            <input type="date">
+            <input type="time">
+            <input type="number" placeholder="Số người">
+            <textarea placeholder="Yêu cầu"></textarea>
+            <button>Đặt bàn</button>
+        </form>
+    </div>
+
+    <div class="form-section">
+        <h2>💬 Form gửi phản hồi</h2>
+        <form>
+            <p>Đánh giá: <span style="color: gold; font-size: 1.2em;">★★★★★</span></p>
+            <textarea placeholder="Nội dung phản hồi"></textarea>
+            <input type="email" placeholder="Email">
+            <button>Gửi</button>
+        </form>
+    </div>
+
+    <div class="form-section">
+        <h2>💳 Form thanh toán đơn hàng</h2>
+        <form>
+            <input type="text" placeholder="Địa chỉ nhận hàng">
+            <select>
+                <option>Thanh toán khi nhận hàng</option>
+                <option>Chuyển khoản</option>
+            </select>
+            <button>Thanh toán</button>
+        </form>
+    </div>
+</body>
+
+</html>
