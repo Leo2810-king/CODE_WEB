@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký thông tin</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #54b7df;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #93ebee;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            color: rgb(0, 255, 255);
+            text-align: center;
+            -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+            text-shadow: 2px 2px 5px black;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 700;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            flex: 1;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 20px;
+        }
+
+        .gender-options label {
+            font-weight: normal;
+        }
+
+        button[type="submit"] {
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #175ea4;
+            color: white;
+            font-size: 16px;
+            width: 50%;
+            max-width: 250px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FORM ĐĂNG KÝ THÔNG TIN</h1>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">Họ và tên:</label>
+            <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+            <label for="tel">Số điện thoại:</label>
+            <input type="tel" id="tel" name="tel" required />
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính:</label>
+            <div class="gender-options">
+                <label class="gender"><input type="radio" name="gender" value="male" required /> Nam</label>
+                <label class="gender"><input type="radio" name="gender" value="female" /> Nữ</label>
+                <label class="gender"><input type="radio" name="gender" value="other" /> Khác</label>
+            </div>
+        </div>
+
+        <button type="submit">Gửi</button>
+    </form>
+</body>
+
+</html>

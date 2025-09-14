@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư viện ảnh</title>
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #1ad5ee, #00d5ff);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* mặc định 3 cột */
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Tablet: 2 cột */
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile: 1 cột */
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Thư Viện Ảnh Mèo</h2>
+    <div class="gallery">
+        <img src="../../image/Lab_05_06/Mèo/Meo1.jpg" alt="Ảnh 1">
+        <img src="../../image/Lab_05_06/Mèo/Meo2.jpg" alt="Ảnh 2">
+        <img src="../../image/Lab_05_06/Mèo/Meo3.jpg" alt="Ảnh 3">
+        <img src="../../image/Lab_05_06/Mèo/Meo4.jpg" alt="Ảnh 4">
+        <img src="../../image/Lab_05_06/Mèo/Meo5.jpg" alt="Ảnh 5">
+        <img src="../../image/Lab_05_06/Mèo/Meo6.jpg" alt="Ảnh 6">
+    </div>
+</body>
+
+</html>

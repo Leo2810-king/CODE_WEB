@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo sát ý kiến</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(192, 44%, 48%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 450px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0073b1;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Flex cho radio/checkbox */
+        .options-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .options-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .options-group input[type="radio"],
+        .options-group input[type="checkbox"] {
+            accent-color: #0073b1;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #0073b1;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #005f85;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <h2>KHẢO SÁT Ý KIẾN NGƯỜI DÙNG</h2>
+
+        <label>Bạn có hài lòng với dịch vụ của chúng tôi không? <span style="color:red">*</span></label>
+        <div class="options-group">
+            <label><input type="radio" name="satisfaction" value="Có" required> Có</label>
+            <label><input type="radio" name="satisfaction" value="Không"> Không</label>
+        </div>
+
+        <label>Bạn thích những tính năng nào? (Chọn nhiều)</label>
+        <div class="options-group">
+            <label><input type="checkbox" name="features[]" value="Giao diện đẹp"> Giao diện đẹp</label>
+            <label><input type="checkbox" name="features[]" value="Dễ sử dụng"> Dễ sử dụng</label>
+            <label><input type="checkbox" name="features[]" value="Tốc độ nhanh"> Tốc độ nhanh</label>
+        </div>
+
+        <label for="comments">Ý kiến khác:</label>
+        <textarea id="comments" name="comments" placeholder="Viết ý kiến của bạn..."></textarea>
+
+        <label for="rating">Đánh giá tổng thể: <span style="color:red">*</span></label>
+        <select id="rating" name="rating" required>
+            <option value="">--Chọn--</option>
+            <option value="1">1 - Rất tệ</option>
+            <option value="2">2 - Tệ</option>
+            <option value="3">3 - Bình thường</option>
+            <option value="4">4 - Tốt</option>
+            <option value="5">5 - Rất tốt</option>
+        </select>
+
+        <button type="submit">Gửi khảo sát</button>
+    </form>
+</body>
+
+</html>

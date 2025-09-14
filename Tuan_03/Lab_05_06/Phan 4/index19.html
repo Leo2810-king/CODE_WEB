@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sự kiện</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* GRID lịch */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+        }
+
+        .day-header {
+            text-align: center;
+            font-weight: bold;
+            background: #4e73df;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .day {
+            min-height: 160px;
+            background: #f9fafc;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 8px 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin: 0 0 5px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 5px;
+            background: #28a745;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .highlight {
+            outline: 2px solid #28a745;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>LỊCH SỰ KIỆN (TUẦN 1 - 7/9/2025)</h1>
+        <div class="calendar">
+            <!-- Header thứ -->
+            <div class="day-header">Thứ 2</div>
+            <div class="day-header">Thứ 3</div>
+            <div class="day-header">Thứ 4</div>
+            <div class="day-header">Thứ 5</div>
+            <div class="day-header">Thứ 6</div>
+            <div class="day-header">Thứ 7</div>
+            <div class="day-header">CN</div>
+
+            <!-- Các ô ngày -->
+            <div class="day">
+                <div class="card highlight">
+                    <h3>Sự kiện Quốc Gia</h3>
+                    <p>02/09/2025 – Hà Nội</p>
+                    <span class="tag">Miễn phí</span>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="card">
+                    <h3>Workshop NTTU</h3>
+                    <p>05/09/2025 – TP.HCM</p>
+                    <span class="tag">Đăng ký trước</span>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="card">
+                    <h3>Thảo luận về AI</h3>
+                    <p>15/09/2025 – Zoom</p>
+                    <span class="tag">Giới hạn 100 người</span>
+                </div>
+            </div>
+
+            <!-- Các ô trống -->
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* GRID */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARD */
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .content {
+            padding: 15px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+            color: #222;
+            line-height: 1.4;
+        }
+
+        .excerpt {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 15px;
+            flex: 1;
+        }
+
+        .actions a {
+            display: inline-block;
+            padding: 10px 16px;
+            background-color: #0073b1;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .actions a:hover {
+            opacity: 0.9;
+            background-color: #005f8a;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TIN NÓNG 21/8/2025</h1>
+    </header>
+
+    <main>
+        <div class="news-grid">
+            <article class="card">
+                <img src="../../image/Lab_05_06/Tintuc.jpg" alt="Tin tức" />
+                <div class="content">
+                    <h2>Buổi hợp luyện đầu tiên tại quảng trường Ba Đình</h2>
+                    <p class="excerpt">
+                        20h ngày 21/8, hơn 16.300 quân nhân cùng hàng chục xe pháo, đặc chủng của Quân đội và Công an,
+                        cùng lực lượng Nga, Lào, Campuchia hợp luyện tại quảng trường Ba Đình.
+                    </p>
+                    <div class="actions">
+                        <a href="https://vnexpress.net/buoi-hop-luyen-dau-tien-tai-quang-truong-ba-dinh-4929951.html"
+                            target="_blank">
+                            Đọc tiếp
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>© 2025 Tin nhanh</footer>
+</body>
+
+</html>

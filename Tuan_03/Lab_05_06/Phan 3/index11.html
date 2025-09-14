@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #84e8f9;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #175ea4;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #175ea4;
+            box-shadow: 0 0 8px rgba(23, 94, 164, 0.3);
+        }
+
+        button[type="submit"] {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background-color: #175ea4;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0d4a87;
+            transform: scale(1.05);
+        }
+
+        button[type="submit"]:active {
+            background-color: #003d73;
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Form Đăng Nhập</h1>
+        <form action="#" method="post">
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Đăng nhập</button>
+        </form>
+    </div>
+</body>
+
+</html>

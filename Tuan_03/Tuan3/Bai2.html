@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FlowerBox 360</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER */
+        header {
+            background: #f9fbff;
+            background-color: #294e79;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .logo img {
+            width: 70px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 40px;
+            color: white;
+        }
+
+        .logo p {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+        }
+
+        .search-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .search {
+            display: flex;
+            gap: 0;
+            margin-bottom: 50px;
+        }
+
+        .search input {
+            padding: 5px 8px;
+            background-color: #1c3451;
+            border: 1px solid #6699cc;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            border-radius: 0;
+            width: 200px;
+        }
+
+        .search input::placeholder {
+            color: #ddd;
+        }
+
+        .search button {
+            padding: 5px 10px;
+            background-color: #1c3451;
+            border: 1px solid #6699cc;
+            color: white;
+            cursor: pointer;
+            border-radius: 0;
+            margin-left: 20px;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            right: 10;
+            width: 100%;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            background: #3d73b1;
+            padding: 10px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN */
+        main {
+            color: #7c7c7c;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .contact h2,
+        .discount h3 {
+            font-family: 'Times New Roman', Times, serif;
+            border-bottom: 2px dotted #888;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .info h3 {
+            margin: 0px;
+            font-family: 'Times New Roman', Times, serif;
+            border-bottom: 2px dotted #888;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        form p.intro {
+            margin: 0px;
+            color: red;
+            font-style: italic;
+            margin-bottom: 20px;
+            text-shadow: 5px 5px 5px green;
+            display: flex;
+            text-align: justify;
+        }
+
+        form {
+            display: block;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        form button {
+            margin-top: 10px;
+            padding: 5px 15px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #f2f2f2;
+        }
+
+
+        .info p {
+            margin: 5px 0;
+            text-align: justify;
+        }
+
+        .info b {
+            font-weight: bold;
+        }
+
+        .info i {
+            font-style: italic;
+        }
+
+        .discount {
+            background: #f9f9f9;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #7c7c7c;
+            text-align: justify;
+        }
+
+        .discount img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .discount a {
+            text-decoration: none;
+            color: #224488;
+            font-weight: bold;
+            display: flex;
+            justify-content: end;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1c3451;
+            color: white;
+            text-align: start;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        footer a {
+            color: #66aaff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="../image/Tuan3/flower.png" alt="Flower">
+            <div>
+                <h1>FlowerBox 360</h1>
+                <p>...to get your daily dose of luxury roses!</p>
+            </div>
+        </div>
+        <div class="search-nav">
+            <div class="search">
+                <input type="text" placeholder="Search the site...">
+                <button>GO</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">Gift Baskets</a></li>
+                    <li><a href="#">Flower Services</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="left">
+            <div class="contact">
+                <h2>Why Not Contact Us Today!</h2>
+                <div class="contact-content">
+                    <form>
+                        <p class="intro">
+                            For FlowerBox 360 shoppers, that means not only can you send your friends
+                            and loved ones the highest quality flowers found on online, but that you
+                            can do so at a great value.
+                        </p>
+                        <div class="input-grid">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name">
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="text" id="email">
+                            </div>
+                            <div>
+                                <label for="telephone">Telephone:</label>
+                                <input type="text" id="telephone">
+                            </div>
+                            <div>
+                                <label for="subject">Subject:</label>
+                                <input type="text" id="subject">
+                            </div>
+                        </div>
+                        <label for="message">Message:</label>
+                        <textarea id="message"></textarea>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </form>
+
+                    <div class="info">
+                        <h3>FlowerBox 360 Info!</h3>
+                        <p>Operating Hours:</p>
+                        <p>Monday-Friday: 9.00am-5.00pm</p>
+                        <p>Saturday: 9.00am-1.00pm</p>
+                        <p>Sunday: Closed (No Deliveries)</p>
+                        <p>ORDER ONLINE 24/7</p><br><br>
+                        <p>Software Engineering Dept.</p>
+                        <p>Information Technology Faculty</p>
+                        <p>First Floor, H Building</p><br>
+                        <p>12 Nguyen Van Bao St., Ward 4</p>
+                        <p>Go Vap District</p>
+                        <p>Ho Chi Minh City</p>
+                        <p>Tel: 0283.8940 390</p>
+                        <p>Fax: 0283.9940 954</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="discount">
+                <h3>Discounts & Specials</h3>
+                <img src="../image/Tuan3/rose.png" alt="Flower">
+                <p>
+                    FlowerBox 360 offers many great discounts throughout the year,
+                    from coupons and coupon codes, to promo codes and other savings.
+                    We also offer military flower discounts to our wonderful troops!
+                </p>
+                <a href="#">Read More »</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            Copyright © 2017 - All Rights Reserved
+            <a href="#">- Software Engineering Department - Industrial University of Ho Chi Minh City</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

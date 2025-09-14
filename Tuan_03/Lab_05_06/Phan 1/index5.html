@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #175ea4;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            /* canh giữa theo chiều ngang */
+            gap: 40px;
+            /* khoảng cách giữa các link */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        /* Hiệu ứng underline animation */
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: yellow;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:active {
+            text-decoration: underline;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index1.html">Trang Giới Thiệu</a>
+        <a href="index2.html">Môn Học Yêu Thích</a>
+        <a href="index3.html">Thời Khóa Biểu</a>
+        <a href="index4.html">Đăng Ký Thông Tin</a>
+    </nav>
+</body>
+
+</html>

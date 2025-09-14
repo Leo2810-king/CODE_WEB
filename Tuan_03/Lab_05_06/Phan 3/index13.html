@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đặt Bàn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            width: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff7733;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Button đặt riêng 2 cột */
+        .btn-submit {
+            grid-column: span 2;
+            margin-top: 10px;
+            background-color: #ff9966;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #ff7733;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h2>FORM ĐẶT BÀN</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Tên<span style="color:red">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="people">Số người<span style="color:red">*</span></label>
+                <input type="number" id="people" name="people" required>
+            </div>
+
+            <div class="form-group">
+                <label for="datetime">Ngày & Giờ<span style="color:red">*</span></label>
+                <input type="datetime-local" id="datetime" name="datetime" required>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Yêu cầu đặc biệt</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Đặt bàn</button>
+        </form>
+    </div>
+</body>
+
+</html>

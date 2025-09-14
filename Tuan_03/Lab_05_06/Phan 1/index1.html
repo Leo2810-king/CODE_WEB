@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #e0f7fa, #fff8e1);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* cần để canh giữa dọc */
+            margin: 0;
+        }
+        
+        .profile {
+            background-color: #ffffff;
+            padding: 35px 25px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            /* mặc định: dọc cho màn hình nhỏ */
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .profile:hover {
+            transform: translateY(-5px);
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00acc1;
+        }
+        
+        h1 {
+            color: #00695c;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 16px;
+            color: #444;
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: #a31111;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <img src="D:/git/Tuan_02/images/avatar.jpg" alt="Ảnh đại diện" class="avatar" />
+
+        <div class="profile-content">
+            <h1>TRANG GIỚI THIỆU BẢN THÂN</h1>
+            <h1>Vũ Hoàng Long</h1>
+            <p>Sinh viên năm 3 ngành <span class="highlight">Hệ Thống Thông Tin</span>.</p>
+            <p>Yêu thích <span class="highlight">Nghe nhạc </span> & phát triển kĩ năng <span class="highlight">Công Nghệ
+                    Thông Tin</span>.</p>
+            <p>Quê quán: <span class="highlight">Đồng Nai</span></p>
+        </div>
+    </div>
+</body>
+
+</html>

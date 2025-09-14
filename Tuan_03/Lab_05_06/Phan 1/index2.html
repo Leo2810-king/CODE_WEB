@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách môn học yêu thích</title>
+    <style>
+        body {
+            background-color: #eaebc1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+            margin-bottom: 30px;
+        }
+
+        .monhoc {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            /* tự động 2–3 cột */
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .monhoc li {
+            background: #ffffff;
+            padding: 20px;
+            border: 2px solid #00acc1;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        .monhoc li:hover {
+            background-color: #00acc1;
+            color: white;
+            transform: translateY(-5px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CÁC MÔN HỌC YÊU THÍCH</h1>
+    <ul class="monhoc">
+        <li>Hệ Thống và Công Nghệ Web</li>
+        <li>Lập Trình Phân Tích Dữ Liệu</li>
+        <li>Tiếng Việt Thực Hành</li>
+        <li>Cơ Sở Dữ Liệu</li>
+        <li>Cấu Trúc Dữ Liệu & Giải Thuật</li>
+    </ul>
+</body>
+
+</html>

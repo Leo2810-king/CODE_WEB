@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #eeeeee;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1196cb;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .timetable {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            /* Thứ - Môn học - Tiết - Phòng */
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 3px solid #8bb4ff;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Header */
+        .header {
+            background-color: #1196cb;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            text-transform: uppercase;
+        }
+
+        /* Cell chung */
+        .cell {
+            border: 1px solid #8bb4ff;
+            padding: 12px;
+            text-align: center;
+        }
+
+        /* Dòng chẵn/lẻ */
+        .row:nth-child(odd) .cell {
+            background-color: #d0e7ff;
+        }
+
+        .row:nth-child(even) .cell {
+            background-color: #f0d9ff;
+        }
+
+        /* Hover */
+        .row:hover .cell {
+            background-color: #3173b1;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Mỗi row là grid với 4 cột */
+        .row {
+            display: contents;
+            /* giữ cấu trúc grid cha */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Thời khóa biểu</h2>
+
+    <div class="timetable">
+        <!-- Header -->
+        <div class="header">Thứ</div>
+        <div class="header">Môn học</div>
+        <div class="header">Tiết học</div>
+        <div class="header">Phòng học</div>
+
+        <!-- Hàng -->
+        <div class="row">
+            <div class="cell">Hai</div>
+            <div class="cell">Hệ thống & Công nghệ Web</div>
+            <div class="cell">Tiết 1-3</div>
+            <div class="cell">H5.1.1</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Hai</div>
+            <div class="cell">Lập trình phân tích dữ liệu 1</div>
+            <div class="cell">Tiết 4-6</div>
+            <div class="cell">H4.2.1</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Hai</div>
+            <div class="cell">Tư tưởng Hồ Chí Minh</div>
+            <div class="cell">Tiết 7-9</div>
+            <div class="cell">B2.06</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Ba</div>
+            <div class="cell">Phân tích thiết kế hệ thống</div>
+            <div class="cell">Tiết 7-9</div>
+            <div class="cell">B2.08</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Tư</div>
+            <div class="cell">Phân tích thiết kế hệ thống</div>
+            <div class="cell">Tiết 1-3</div>
+            <div class="cell">H5.2.1</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Tư</div>
+            <div class="cell">Anh Văn 3</div>
+            <div class="cell">Tiết 7-8</div>
+            <div class="cell">C3.01</div>
+        </div>
+    </div>
+</body>
+
+</html>

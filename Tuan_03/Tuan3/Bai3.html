@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .conteiner {
+            height: 100%;
+
+        }
+
+        header .title {
+            padding: 20px;
+            background-color: #AC4B16;
+            font-size: 20px;
+            text-shadow: -6px -9px 9px #fff;
+            color: #7F8000;
+            font-weight: Arial;
+        }
+
+        header .navigation {
+            border-top: solid black;
+            border-bottom: 6px double gray;
+        }
+
+        header .navigation ul li {
+            display: inline-flex;
+            font-size: 20px;
+        }
+
+        header .navigation ul li a {
+            padding: 5px 10px;
+            color: rgb(115, 50, 0);
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        header .line {
+            background-image: url(../image/Tuan3/headline.png);
+            background-repeat: repeat-x;
+            height: 100px;
+            background-size: contain;
+        }
+
+        section {
+            display: flex;
+            height: 100%;
+        }
+
+        .left {
+            flex: 2.5;
+            font-size: 18px;
+            color: #AC7400;
+            margin-left: 20px;
+            padding-bottom: 40px;
+            font-weight: Arial;
+        }
+
+        .left h1 {
+            font-size: 30px;
+        }
+
+        .left p {
+            padding: 20px 40px;
+            color: #AE983E;
+            font-size: 24px;
+            font-style: italic;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+
+        .left form {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            position: relative;
+            top: 30px;
+            width: 130px;
+            padding: 5px 10px;
+            background-color: #807E03;
+            color: white;
+            border: none;
+        }
+
+        .right {
+            flex: 0.7;
+            display: flex;
+            padding: 15px;
+            flex-direction: column;
+            align-items: center;
+            border-left: 2px solid gray;
+
+        }
+
+        .right .content {
+            width: 90%;
+            height: 50%;
+            background-color: antiquewhite;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .right .more-info {
+            text-align: justify;
+            font-size: 15px;
+            margin: 0px 10px 0px 40px;
+            color: rgb(100, 96, 96);
+        }
+
+        .more-info h1 {
+            color: rgb(115, 50, 0);
+        }
+
+        .right .more-info img {
+            width: 35%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            float: left;
+        }
+
+        .content h1 {
+            font-size: 20px;
+            color: rgb(115, 50, 0);
+            margin-left: 20px;
+            padding-bottom: 40px;
+        }
+
+        .content ul {
+            font-size: 20px;
+            list-style: square;
+            color: #AC4B16;
+            margin-left: 60px;
+        }
+
+        footer img {
+            width: 100%;
+            float: left;
+        }
+
+        .footer-between {
+            width: 100%;
+            background: url(../image/Tuan3/footer.png) repeat-x;
+            background-size: 100px;
+            position: absolute;
+            line-height: 64px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <header>
+            <div class="title">
+                <h1>AUTUMN TRAVEL COMPANY</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Order</a></li>
+                </ul>
+            </div>
+            <div class="line">
+            </div>
+
+        </header>
+
+        <section>
+            <article class="left">
+                <h1>Sign up for membership benefits</h1>
+                <p>Our philisophical are transparency, respect,
+                    formality and responsibility. Our stimulus is your enthusiasm.
+                    Our motto is your satisfation.</p>
+                <form action="">
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Password">
+                    <input type="text" placeholder="Retype password">
+                    <button>SIGN ME UP</button>
+                </form>
+            </article>
+            <article class="right">
+                <div class="content">
+                    <h1>Links</h1>
+                    <ul>
+                        <li>Make your Own Tour</li>
+                        <li>Maldives Tours</li>
+                        <li>Nature & Adventure</li>
+                        <li>Europe Tours</li>
+                        <li>Rusia Tours</li>
+                    </ul>
+                </div>
+                <div class="more-info">
+                    <h1>More Info</h1>
+                    <img src="../image/Tuan3/leaf.png" alt="">
+                    <p>Our purpose is the client who gives to us the opportunites to serve and to make known the reality
+                        arround the world
+                    </p>
+                </div>
+            </article>
+        </section>
+        <div class="footer-between">
+            </p>© 2017 Software Engineering Department | Test Date: 16 Sept 2017</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Trần Quốc Khang</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Segoe UI", Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .page {
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .avatar {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border: 4px solid #4e73df;
+        }
+        
+        .name {
+            font-size: 1.8em;
+            color: #222;
+        }
+        
+        .sub {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .contact p {
+            margin: 5px 0;
+            font-size: 0.95em;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact i {
+            color: #4e73df;
+            min-width: 18px;
+        }
+        /* Grid layout */
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card h2 {
+            margin-bottom: 12px;
+            font-size: 1.3em;
+            color: #4e73df;
+            border-bottom: 2px solid #e6e9f2;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+        /* Nền riêng */
+        
+        .info {
+            background: #f1f1f1;
+        }
+        
+        .skills {
+            background: #eaf1ff;
+        }
+        
+        .experience {
+            background: #fff;
+        }
+        
+        .education {
+            background: #f9f9f9;
+        }
+        
+        .muted {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 15px;
+        }
+        
+        ul li {
+            position: relative;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        ul li::before {
+            content: "•";
+            color: #4e73df;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+        
+        .pill {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 5px;
+            background: #eef3ff;
+            color: #2d4ab8;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        .pill:hover {
+            background: #4e73df;
+            color: #fff;
+        }
+        
+        .item {
+            margin-bottom: 18px;
+        }
+        
+        .item strong {
+            display: block;
+            font-size: 1.05em;
+            margin-bottom: 5px;
+            color: #222;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 600px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+            .name {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <!-- Header -->
+        <section class="header">
+            <img class="avatar" src="D:/git/Tuan_02/images/avatar.jpg" alt="Ảnh đại diện">
+            <div>
+                <h1 class="name">Vũ Hoàng Long</h1>
+                <p class="sub">Internet Security • Hồ Chí Minh</p>
+                <div class="contact">
+                    <p><i class="fas fa-phone"></i> 0859346889</p>
+                    <p><i class="fas fa-envelope"></i> longhoangvu28102005@gmail.com</p>
+                    <p><i class="fab fa-github"></i> github.com/Leo2810-king</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nội dung chính -->
+        <section class="grid">
+            <!-- Thông tin -->
+            <article class="card info">
+                <h2>Thông tin cá nhân</h2>
+                <p class="muted">Lập trình viên An ninh với hơn 3 năm kinh nghiệm hoạt động về bảo mật, an ninh mạng.
+                </p>
+                <ul>
+                    <li><i class="fas fa-birthday-cake"></i> 28/11/2005</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Xuân Lộc, Đồng Nai</li>
+                    <li><i class="fas fa-heart"></i> Nghe nhạc, Chơi game, Mua sắm, Du lịch</li>
+                </ul>
+            </article>
+
+            <!-- Kỹ năng -->
+            <article class="card skills">
+                <h2>Kỹ năng</h2>
+                <div>
+                    <span class="pill">HTML5</span>
+                    <span class="pill">CSS3 / SCSS</span>
+                    <span class="pill">JavaScript (ES6+)</span>
+                    <span class="pill">React / Vite</span>
+                    <span class="pill">Responsive / A11y</span>
+                    <span class="pill">Git & GitHub</span>
+                    <span class="pill">Figma</span>
+                    <span class="pill">REST API</span>
+                </div>
+            </article>
+
+            <!-- Kinh nghiệm -->
+            <article class="card experience">
+                <h2>Kinh nghiệm</h2>
+                <div class="item">
+                    <strong><i class="fas fa-briefcase"></i> Security Intern – CyberDefend</strong>
+                    <div class="row"><span>01/2024 – 12/2024</span><span>Hồ Chí Minh</span></div>
+                    <ul>
+                        <li>Penetration testing hệ thống web.</li>
+                        <li>Giám sát log SIEM, phân tích bất thường.</li>
+                        <li>Viết báo cáo lỗ hổng, đề xuất giải pháp.</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <strong><i class="fas fa-laptop-code"></i> Freelancer – Tư vấn bảo mật website</strong>
+                    <div class="row"><span>2023 – nay</span><span>Remote</span></div>
+                    <ul>
+                        <li>Triển khai bảo mật cơ bản cho doanh nghiệp nhỏ.</li>
+                        <li>Cấu hình SSL, CSP, chống XSS/SQLi.</li>
+                        <li>Audit bảo mật và xử lý sự cố.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Học vấn -->
+            <article class="card education">
+                <h2>Học vấn</h2>
+                <div class="item">
+                    <strong><i class="fas fa-graduation-cap"></i> Kỹ sư CNTT – ĐH Công nghiệp TP.HCM</strong>
+                    <div class="row"><span>2023 – 2028</span><span>Hồ Chí Minh</span></div>
+                    <ul>
+                        <li>Chuyên ngành Hệ thống thông tin, GPA 3.2/4.0.</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <strong><i class="fas fa-certificate"></i> Chứng chỉ</strong>
+                    <ul>
+                        <li>Responsive Web Design – freeCodeCamp</li>
+                        <li>Google UX Design Foundations</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
