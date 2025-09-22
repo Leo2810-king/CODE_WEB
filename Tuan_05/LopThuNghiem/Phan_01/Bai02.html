@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Môn học yêu thích</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .course-card h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .course-card p {
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .course-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Môn học yêu thích</h1>
+    <div class="course-list">
+        <div class="course-card">
+            <h2>Lập trình Web</h2>
+            <p>Tìm hiểu về HTML, CSS, JavaScript và các công nghệ web khác.</p>
+        </div>
+        <div class="course-card">
+            <h2>Học máy</h2>
+            <p>Khám phá cách các thuật toán học máy có thể giúp giải quyết bài toán thực tế.</p>
+        </div>
+        <div class="course-card">
+            <h2>Khoa học dữ liệu</h2>
+            <p>Phân tích dữ liệu và sử dụng các công cụ để trực quan hóa thông tin.</p>
+        </div>
+    </div>
+
+</body>
+</html>
