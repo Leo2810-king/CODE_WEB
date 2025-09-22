@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .intro img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .intro .info {
+            max-width: 400px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="intro">
+        <img src="https://via.placeholder.com/150" alt="Ảnh đại diện">
+        <div class="info">
+            <h1>Xin chào, tôi là [Vu Hoang Long]</h1>
+            <p>Đây là một đoạn giới thiệu ngắn về bản thân tôi. Tôi yêu thích lập trình và luôn muốn học hỏi các công nghệ mới. Ngoài việc lập trình, tôi còn thích du lịch và khám phá các nền văn hóa khác nhau.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

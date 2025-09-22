@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khoá biểu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+        .schedule div {
+            padding: 10px;
+            text-align: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .schedule .day {
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        .schedule .course {
+            background-color: #dff0d8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .schedule {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .schedule {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thời khoá biểu</h1>
+    <div class="schedule">
+        <div class="day">Thứ 2</div>
+        <div class="day">Thứ 3</div>
+        <div class="day">Thứ 4</div>
+        <div class="day">Thứ 5</div>
+        <div class="day">Thứ 6</div>
+        <div class="day">Thứ 7</div>
+        <div class="day">Chủ nhật</div>
+
+        <div class="course">Lập trình Web</div>
+        <div class="course">Học máy</div>
+        <div class="course">Khoa học dữ liệu</div>
+        <div class="course">Đọc sách</div>
+        <div class="course">Thể dục</div>
+        <div class="course">Lập trình di động</div>
+        <div class="course">Chủ nhật nghỉ ngơi</div>
+    </div>
+
+</body>
+</html>
