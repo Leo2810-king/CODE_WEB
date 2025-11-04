@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Thư Viện</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-12 border border-1">
+                <img src="../img/banner1.jpg" alt="" class="w-100">
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-12 border border-1">
+                <ul class="nav justify-content-left">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalThanhToan">Thanh Toán</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-12 border border-1">
+                <h3 class="text-center">DANH SÁCH KHÁCH HÀNG THUÊ SÁCH</h3>
+                <div class="table-responsive">
+                    <table class="table table-primary table-bordered table-striped" id="tblData">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Họ tên</th>
+                                <th>Mã sách</th>
+                                <th>Tên sách</th>
+                                <th>Thể loại</th>
+                                <th>Ngày mượn</th>
+                                <th>Ngày trả</th>
+                                <th>Số ngày</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-12 border border-1 text-center fw-bold">23645361 - Vũ Hoàng Long - DHHTTT19ATT - 45</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalThanhToan" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Thông Tin Thuê Sách</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmThanhToan">
+                        <!-- 1 dòng họ tên -->
+                        <div class="mb-3">
+                            <label>Họ tên:</label>
+                            <input type="text" id="hoTen" class="form-control">
+                            <div class="error text-danger" id="errHoTen"></div>
+                        </div>
+
+                        <!-- 1 dòng ngày thuê -->
+                        <div class="mb-3">
+                            <label>Ngày thuê:</label>
+                            <input type="date" id="ngayThue" class="form-control">
+                            <div class="error text-danger" id="errNgayThue"></div>
+                        </div>
+
+                        <!-- 1 dòng ngày trả -->
+                        <div class="mb-3">
+                            <label>Ngày trả:</label>
+                            <input type="date" id="ngayTra" class="form-control">
+                            <div class="error text-danger" id="errNgayTra"></div>
+                        </div>
+
+                        <!-- 1 dòng số ngày (tự hiện) -->
+                        <div class="mb-3">
+                            <label>Số ngày:</label>
+                            <input type="number" id="soNgay" class="form-control" readonly style="background-color: #e9ecef;">
+                        </div>
+
+                        <!-- 1 dòng mã sách -->
+                        <div class="mb-3">
+                            <label>Mã sách:</label>
+                            <input type="text" id="maSach" class="form-control">
+                            <div class="error text-danger" id="errMaSach"></div>
+                        </div>
+
+                        <!-- 1 dòng tên sách -->
+                        <div class="mb-3">
+                            <label>Tên sách:</label>
+                            <input type="text" id="tenSach" class="form-control">
+                            <div class="error text-danger" id="errTenSach"></div>
+                        </div>
+
+                        <!-- 1 dòng thể loại -->
+                        <div class="mb-3">
+                            <label>Thể loại:</label>
+                            <select id="theLoai" class="form-select">
+                                <option value="">--Chọn thể loại--</option>
+                                <option value="Thiếu nhi">Thiếu nhi</option>
+                                <option value="Trinh thám">Trinh thám</option>
+                            </select>
+                            <div class="error text-danger" id="errTheLoai"></div>
+                        </div>
+
+                        <!-- 1 dòng số lượng và giá thuê -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Số lượng:</label>
+                                <input type="number" id="soLuong" class="form-control" min="1" value="1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Đơn giá (VNĐ):</label>
+                                <input type="number" id="donGia" class="form-control" min="0" value="10000">
+                            </div>
+                        </div>
+
+                        <!-- 1 dòng thành tiền (tự hiện) -->
+                        <div class="mb-3">
+                            <label>Thành tiền:</label>
+                            <input type="text" id="thanhTien" class="form-control" readonly style="background-color: #e9ecef;">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button id="btnSubmit" class="btn btn-success flex-fill me-2" style="background-color: #11d63f; border-color: #11d63f;">Thanh toán</button>
+                    <button id="btnCancel" class="btn btn-danger flex-fill ms-2" style="background-color: #dc3545; border-color: #dc3545;" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Viết hoa chữ cái đầu mỗi từ cho Họ tên
+            $("#hoTen").on("input", function() {
+                let str = $(this).val().toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+                $(this).val(str);
+            });
+
+            // Tính số ngày tự động
+            $("#ngayThue, #ngayTra").on("change", function() {
+                let nt = new Date($("#ngayThue").val());
+                let nr = new Date($("#ngayTra").val());
+                if (!isNaN(nt) && !isNaN(nr) && nr > nt) {
+                    let diff = Math.ceil((nr - nt) / (1000 * 3600 * 24));
+                    $("#soNgay").val(diff);
+                    calculateThanhTien(); // Tính lại thành tiền ngay
+                } else {
+                    $("#soNgay").val("");
+                    $("#thanhTien").val("");
+                }
+            });
+
+            // Hàm tính thành tiền
+            function calculateThanhTien() {
+                let soNgay = Number($("#soNgay").val());
+                let soLuong = Number($("#soLuong").val());
+                let donGia = Number($("#donGia").val());
+                if (soNgay > 0 && soLuong > 0 && donGia > 0) {
+                    let thanhTien = soNgay * soLuong * donGia;
+                    $("#thanhTien").val(thanhTien.toLocaleString('vi-VN'));
+                } else {
+                    $("#thanhTien").val("");
+                }
+            }
+
+            // Tính thành tiền tự động khi thay đổi số lượng hoặc đơn giá
+            $("#soLuong, #donGia").on("input change", function() {
+                calculateThanhTien();
+            });
+
+            // Nút Thanh toán
+            $("#btnSubmit").click(function() {
+                let valid = true;
+                $(".error").text("");
+
+                // Kiểm tra họ tên
+                let hoTen = $("#hoTen").val().trim();
+                if (hoTen === "") {
+                    $("#errHoTen").text("Vui lòng nhập họ tên.");
+                    valid = false;
+                } else {
+                    let regexTen = /^([A-ZÀ-Ỵ][a-zà-ỹ]*(\s[A-ZÀ-Ỵ][a-zà-ỹ]*)+)$/;
+                    if (!regexTen.test(hoTen)) {
+                        $("#errHoTen").text("Ví dụ: Tran Thanh Thao");
+                        valid = false;
+                    }
+                }
+
+                // Kiểm tra mã sách
+                let maSach = $("#maSach").val().trim();
+                if (maSach === "") {
+                    $("#errMaSach").text("Vui lòng nhập mã sách.");
+                    valid = false;
+                } else {
+                    let regexMa = /^(TN|TT)\d{4}$/;
+                    if (!regexMa.test(maSach)) {
+                        $("#errMaSach").text("Mã sách gồm 6 ký tự: TN/TT + 4 số (VD: TN1234)");
+                        valid = false;
+                    }
+                }
+
+                // Kiểm tra tên sách
+                let tenSach = $("#tenSach").val().trim();
+                if (tenSach === "") {
+                    $("#errTenSach").text("Vui lòng nhập tên sách.");
+                    valid = false;
+                }
+
+                // Kiểm tra thể loại
+                if ($("#theLoai").val() === "") {
+                    $("#errTheLoai").text("Vui lòng chọn thể loại.");
+                    valid = false;
+                }
+
+                // Kiểm tra ngày thuê và ngày trả
+                if ($("#ngayThue").val() === "") {
+                    $("#errNgayThue").text("Vui lòng chọn ngày thuê.");
+                    valid = false;
+                }
+                if ($("#ngayTra").val() === "") {
+                    $("#errNgayTra").text("Vui lòng chọn ngày trả.");
+                    valid = false;
+                } else if ($("#ngayThue").val() !== "") {
+                    let nt = new Date($("#ngayThue").val());
+                    let nr = new Date($("#ngayTra").val());
+                    if (nr <= nt) {
+                        $("#errNgayTra").text("Ngày trả phải sau ngày thuê.");
+                        valid = false;
+                    }
+                }
+
+                if (valid) {
+                    let stt = $("#tblData tbody tr").length + 1;
+                    let row = `
+          <tr>
+            <td>${stt}</td>
+            <td>${hoTen}</td>
+            <td>${maSach}</td>
+            <td>${tenSach}</td>
+            <td>${$("#theLoai").val()}</td>
+            <td>${$("#ngayThue").val()}</td>
+            <td>${$("#ngayTra").val()}</td>
+            <td>${$("#soNgay").val()}</td>
+            <td>${$("#soLuong").val()}</td>
+            <td>${$("#donGia").val()}</td>
+            <td>${$("#thanhTien").val()}</td>
+          </tr>`;
+                    $("#tblData tbody").append(row);
+                    $("#modalThanhToan").modal("hide");
+                    // Reset form
+                    $("#frmThanhToan")[0].reset();
+                    $(".error").text("");
+                }
+            });
+
+            // Nút Hủy – reset form & xóa lỗi
+            $("#btnCancel").click(function() {
+                $("#frmThanhToan")[0].reset();
+                $(".error").text("");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
