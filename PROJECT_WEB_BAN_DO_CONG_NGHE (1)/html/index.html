@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Công Nghệ Apple Việt Nam - Công nghệ hàng đầu</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="#"><img src="../img/logo.jpg" alt="Logo" class="logo-img me-2">Công Nghệ Store VN</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Categories Menu -->
+                <ul class="navbar-nav me-auto mx-3">
+                    <li class="nav-item">
+                        <a class="nav-link category-link active" href="#" data-category="all">
+                            <i class="fas fa-home me-1"></i>Tất cả
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="mac">
+                            <i class="fas fa-laptop me-1"></i>Mac
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="iphone">
+                            <i class="fas fa-mobile-alt me-1"></i>iPhone
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="ipad">
+                            <i class="fas fa-tablet-alt me-1"></i>iPad
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="watch">
+                            <i class="fas fa-clock me-1"></i>Watch
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="phukien">
+                            <i class="fas fa-headphones me-1"></i>Phụ kiện
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search Box -->
+                <div class="d-flex align-items-center me-4">
+                    <div class="input-group" style="width: 300px;">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="btn btn-outline-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <ul class="navbar-nav ms-2">
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#" id="cartBtn">
+                            <i class="fas fa-shopping-cart me-1"></i> Giỏ hàng
+                            <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="loginBtn">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-sign-in-alt me-1"></i>Đăng nhập
+                        </a>
+                    </li>
+                    <li class="nav-item" id="registerBtn">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <i class="fas fa-user-plus me-1"></i>Đăng ký
+                        </a>
+                    </li>
+                    <li class="nav-item" id="customerInfoBtn" style="display: none;">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#customerInfoModal">
+                            <i class="fas fa-user me-1"></i>Thông tin
+                        </a>
+                    </li>
+                    <li class="nav-item" id="logoutBtn" style="display: none;">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Banner -->
+    <section class="hero-section text-center text-white position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Khám phá thế giới Apple</h1>
+                    <p class="lead mb-4">Trải nghiệm những sản phẩm công nghệ hàng đầu từ Apple với chất lượng tuyệt vời và dịch vụ chuyên nghiệp.</p>
+                    <button class="btn btn-light btn-lg px-4">
+                        <i class="fas fa-rocket me-2"></i>Khám phá ngay
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../img/LOGOA.jpg" alt="Apple Products" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Banner -->
+    <section class="py-3 bg-warning flash-sale-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="mb-0 fw-bold">
+                        <i class="fas fa-bolt text-danger"></i> FLASH SALE - Giảm giá lên đến 50% cho tất cả sản phẩm!
+                    </h5>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-danger fs-6">
+                        <i class="fas fa-clock"></i> Còn lại: <span id="countdown">23:59:59</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-shipping-fast fa-2x text-primary mb-2"></i>
+                        <h6>Giao hàng miễn phí</h6>
+                        <small class="text-muted">Đơn hàng từ 5 triệu</small>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                        <h6>Bảo hành chính hãng</h6>
+                        <small class="text-muted">Lên đến 2 năm</small>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-headset fa-2x text-info mb-2"></i>
+                        <h6>Hỗ trợ 24/7</h6>
+                        <small class="text-muted">Tư vấn chuyên nghiệp</small>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-undo-alt fa-2x text-warning mb-2"></i>
+                        <h6>Đổi trả 30 ngày</h6>
+                        <small class="text-muted">Không hài lòng hoàn tiền</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="gradient-text">Danh mục sản phẩm</h2>
+                <p class="text-muted">Khám phá đa dạng sản phẩm công nghệ</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="text-center hover-zoom">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-laptop fa-3x text-primary"></i>
+                        </div>
+                        <h5>Laptop</h5>
+                        <p class="text-muted small">Gaming, Văn phòng, Học tập</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm category-link" data-category="mac">Xem thêm</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="text-center hover-zoom">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-mobile-alt fa-3x text-success"></i>
+                        </div>
+                        <h5>Điện thoại</h5>
+                        <p class="text-muted small">iPhone, Samsung, Xiaomi</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm category-link" data-category="iphone">Xem thêm</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="text-center hover-zoom">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-tablet-alt fa-3x text-info"></i>
+                        </div>
+                        <h5>Tablet</h5>
+                        <p class="text-muted small">iPad, Samsung Tab</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm category-link" data-category="ipad">Xem thêm</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="text-center hover-zoom">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-headphones fa-3x text-warning"></i>
+                        </div>
+                        <h5>Tai nghe</h5>
+                        <p class="text-muted small">Gaming, Music, Wireless</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm category-link" data-category="phukien">Xem thêm</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="text-center hover-zoom">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-clock fa-3x text-dark"></i>
+                        </div>
+                        <h5>Watch</h5>
+                        <p class="text-muted small">Apple Watch, Smart Watch</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm category-link" data-category="watch">Xem thêm</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="text-center hover-zoom">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-plug fa-3x text-danger"></i>
+                        </div>
+                        <h5>Phụ kiện</h5>
+                        <p class="text-muted small">Sạc, Cáp, Ốp lưng</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm category-link" data-category="phukien">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Products Section -->
+        <section id="productSection">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-star text-warning me-2"></i>Sản phẩm nổi bật</h2>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary btn-sm category-filter active" data-category="all">Tất cả</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm category-filter" data-category="mac">Mac</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm category-filter" data-category="iphone">iPhone</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm category-filter" data-category="ipad">iPad</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm category-filter" data-category="watch">Watch</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm category-filter" data-category="phukien">Phụ kiện</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row" id="productList">
+                <!-- Sản phẩm sẽ được render bằng JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="gradient-text">Khách hàng nói gì về chúng tôi</h2>
+                <p class="text-muted">Những phản hồi tích cực từ khách hàng</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex mb-3">
+                            <img src="../img/avatar1.jpg" alt="Nguyễn Văn A" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0">Nguyễn Văn A</h6>
+                                <small class="text-muted">Khách hàng thân thiết</small>
+                                <div class="rating text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted">"Sản phẩm chất lượng, giao hàng nhanh, nhân viên tư vấn nhiệt tình. Tôi sẽ quay lại lần sau!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex mb-3">
+                            <img src="../img/avatar2.jpg" alt="Trần Thị B" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0">Trần Thị B</h6>
+                                <small class="text-muted">Designer</small>
+                                <div class="rating text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted">"MacBook mình mua ở đây rất đáng tiền, chạy rất mượt cho công việc thiết kế. Giá cả cũng tốt!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex mb-3">
+                            <img src="../img/avatar3.jpg" alt="Lê Văn C" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0">Lê Văn C</h6>
+                                <small class="text-muted">Developer</small>
+                                <div class="rating text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted">"Mua iPhone ở TechStore, bảo hành tốt, hỗ trợ nhiệt tình. Nhất định sẽ giới thiệu bạn bè!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-primary text-white newsletter-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3><i class="fas fa-envelope me-2"></i> Đăng ký nhận tin khuyến mãi</h3>
+                    <p class="mb-0">Nhận thông tin về các sản phẩm mới và uu đãi đặc biệt qua email. Không spam!</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                        <div class="input-group input-group-lg">
+                            <input type="email" class="form-control" placeholder="Nhập email của bạn..." required>
+                            <button class="btn btn-warning text-dark fw-bold" type="submit">
+                                <i class="fas fa-paper-plane"></i> Đăng ký
+                            </button>
+                        </div>
+                        <small class="text-light opacity-75 d-block mt-2">
+                            <i class="fas fa-shield-alt"></i> Chúng tôi tôn trọng quyền riêng tư của bạn
+                        </small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><img src="../img/logo.jpg" alt="Logo" class="logo-img-footer me-2">Công Nghệ Store VN</h5>
+                    <p class="mb-3">Cửa hàng công nghệ hàng đầu tại Việt Nam. Mang đến cho bạn những sản phẩm công nghệ tiên tiến và chất lượng cao.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-map-marker-alt me-2"></i>Thông tin liên hệ</h5>
+                    <div class="mb-2">
+                        <i class="fas fa-home me-2"></i>
+                        <strong>Trụ sở chính:</strong><br>
+                        <span class="ms-3">123 Đường Nguyễn Huệ, Quận 1, TP.HCM</span>
+                    </div>
+                    <div class="mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        <strong>Hotline:</strong> 1900-1234
+                    </div>
+                    <div class="mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <strong>Email:</strong> support@applestorevi.com
+                    </div>
+                    <div class="mb-2">
+                        <i class="fas fa-clock me-2"></i>
+                        <strong>Giờ làm việc:</strong> 8:00 - 22:00 (T2-CN)
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-info-circle me-2"></i>Chính sách</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Chính sách bảo hành</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Chính sách đổi trả</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Chính sách giao hàng</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Chính sách thanh toán</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Điều khoản sử dụng</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Công Nghệ Store Vietnam. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+    </tr>
+
+
+
+    </table>
+    </div>
+
+
+    </div>
+
+    </div>
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col-12 border border-1">Vũ Hoàng Long, Huỳnh Bùi Thái Bảo</div>
+
+        <!-- Chat AI Bubble -->
+        <div class="chat-bubble" id="chatBubble">
+            <i class="fas fa-comments"></i>
+            <span class="chat-notification" id="chatNotification">1</span>
+        </div>
+
+        <!-- Chat Modal -->
+        <div class="modal fade" id="chatModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title">
+                            <i class="fas fa-robot me-2"></i>Chat AI Hỗ trợ
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="aiChatMessages" class="chat-messages mb-3" style="height: 300px; overflow-y: auto; border: 1px solid #dee2e6; padding: 15px; border-radius: 8px;">
+                            <div class='mb-2 text-start'><span class='badge bg-success'>AI</span> <span>Xin chào! Tôi có thể giúp gì cho bạn về các sản phẩm Apple?</span></div>
+                        </div>
+                        <form id="aiChatForm">
+                            <div class="input-group">
+                                <input type="text" id="aiChatInput" class="form-control" placeholder="Nhập câu hỏi của bạn..." required>
+                                <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-sign-in-alt me-2"></i>Đăng nhập
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="loginEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="loginPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div class="modal fade" id="registerModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-user-plus me-2"></i>Đăng ký tài khoản
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="registerName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="registerEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="registerPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPhone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="registerPhone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerAddress" class="form-label">Địa chỉ</label>
+                                <textarea class="form-control" id="registerAddress" rows="2" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Info Modal -->
+        <div class="modal fade" id="customerInfoModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-user me-2"></i>Thông tin tài khoản
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs" id="customerInfoTabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#customerInfoTab">
+                                    <i class="fas fa-user me-1"></i>Thông tin cá nhân
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#orderHistoryTab">
+                                    <i class="fas fa-shopping-bag me-1"></i>Lịch sử đơn hàng
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#shipmentTrackingTab">
+                                    <i class="fas fa-truck me-1"></i>Theo dõi vận chuyển
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-3">
+                            <div class="tab-pane fade show active" id="customerInfoTab">
+                                <div id="customerInfoContent">
+                                    <!-- Thông tin khách hàng sẽ được hiển thị ở đây -->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="orderHistoryTab">
+                                <div class="order-history">
+                                    <h6><i class="fas fa-shopping-bag me-2"></i>Đơn hàng gần đây</h6>
+                                    <div class="list-group">
+                                        <div class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <strong>Đơn hàng #001</strong>
+                                                <span class="badge bg-success">Đã giao</span>
+                                            </div>
+                                            <small class="text-muted">iPhone 15 Pro Max - 15/11/2024</small>
+                                            <div class="text-end mt-2">
+                                                <strong class="text-success">35.000.000₫</strong>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="d-flex justify-content-between">
+                                                <strong>Đơn hàng #002</strong>
+                                                <span class="badge bg-warning">Đang vận chuyển</span>
+                                            </div>
+                                            <small class="text-muted">MacBook Pro M3 - 20/11/2024</small>
+                                            <div class="text-end mt-2">
+                                                <strong class="text-success">45.000.000₫</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="shipmentTrackingTab">
+                                <div class="shipment-tracking">
+                                    <h6><i class="fas fa-truck me-2"></i>Theo dõi đơn hàng #002</h6>
+                                    <div class="timeline">
+                                        <div class="timeline-item completed">
+                                            <div class="timeline-marker bg-success"></div>
+                                            <div class="timeline-content">
+                                                <strong>Đơn hàng đã được xác nhận</strong>
+                                                <small class="d-block text-muted">20/11/2024 - 10:30</small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item completed">
+                                            <div class="timeline-marker bg-success"></div>
+                                            <div class="timeline-content">
+                                                <strong>Đang chuẩn bị hàng</strong>
+                                                <small class="d-block text-muted">20/11/2024 - 14:45</small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item active">
+                                            <div class="timeline-marker bg-warning"></div>
+                                            <div class="timeline-content">
+                                                <strong>Đang vận chuyển</strong>
+                                                <small class="d-block text-muted">21/11/2024 - 08:00</small>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-marker bg-light"></div>
+                                            <div class="timeline-content">
+                                                <strong>Giao hàng thành công</strong>
+                                                <small class="d-block text-muted">Dự kiến: 22/11/2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title">
+                            <i class="fas fa-shopping-cart me-2"></i>Giỏ hàng của bạn
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="cartItems">
+                            <!-- Các sản phẩm trong giỏ sẽ hiển thị ở đây -->
+                        </div>
+
+                        <!-- AI Chat trong Cart -->
+                        <div class="mt-4 p-3 bg-secondary rounded">
+                            <h6><i class="fas fa-robot me-2"></i>AI Tư vấn mua hàng</h6>
+                            <div id="cartChatMessages" style="height: 150px; overflow-y: auto;" class="mb-2 small">
+                                <div class="mb-1"><span class="badge bg-success">AI</span> Tôi có thể tư vấn về các sản phẩm trong giỏ hàng của bạn!</div>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="Hỏi về sản phẩm..." id="cartChatInput">
+                                <button class="btn btn-outline-light" type="button" id="cartChatSend">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-secondary">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-success" id="checkoutBtn">
+                        <i class="fas fa-credit-card me-2"></i>Thanh toán
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Modal -->
+        <div class="modal fade" id="checkoutModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-credit-card me-2"></i>Thanh toán đơn hàng
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="customerForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="mb-3"><i class="fas fa-user me-2"></i>Thông tin giao hàng</h6>
+                                    <div class="mb-3">
+                                        <label for="customerName" class="form-label">Họ và tên</label>
+                                        <input type="text" class="form-control" id="customerName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customerPhone" class="form-label">Số điện thoại</label>
+                                        <input type="tel" class="form-control" id="customerPhone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customerAddress" class="form-label">Địa chỉ giao hàng</label>
+                                        <textarea class="form-control" id="customerAddress" rows="3" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="mb-3"><i class="fas fa-credit-card me-2"></i>Phương thức thanh toán</h6>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment" id="paymentCOD" value="cod" checked>
+                                            <label class="form-check-label" for="paymentCOD">
+                                            <i class="fas fa-money-bill-wave me-2"></i>Thanh toán khi nhận hàng (COD)
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment" id="paymentBank" value="bank">
+                                            <label class="form-check-label" for="paymentBank">
+                                            <i class="fas fa-university me-2"></i>Chuyển khoản ngân hàng
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment" id="paymentEWallet" value="ewallet">
+                                            <label class="form-check-label" for="paymentEWallet">
+                                            <i class="fas fa-mobile-alt me-2"></i>Ví điện tử (MoMo, ZaloPay)
+                                        </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment method details -->
+                                    <div id="paymentDetails">
+                                        <div class="alert alert-info">
+                                            <small><i class="fas fa-info-circle me-1"></i>Bạn sẽ thanh toán khi nhận hàng.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-check me-2"></i>Xác nhận đặt hàng
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../js/main.js"></script>
+
+        <script>
+            // Chat bubble functionality
+            document.getElementById('chatBubble').addEventListener('click', function() {
+                $('#chatModal').modal('show');
+                document.getElementById('chatNotification').style.display = 'none';
+            });
+
+            // Cart chat functionality
+            document.getElementById('cartChatSend').addEventListener('click', function() {
+                const input = document.getElementById('cartChatInput');
+                const message = input.value.trim();
+                if (message) {
+                    const chatMessages = document.getElementById('cartChatMessages');
+                    chatMessages.innerHTML += `<div class="mb-1"><span class="badge bg-primary">Bạn</span> ${message}</div>`;
+                    input.value = '';
+
+                    // AI response simulation
+                    setTimeout(() => {
+                        chatMessages.innerHTML += `<div class="mb-1"><span class="badge bg-success">AI</span> Tôi khuyên bạn nên chọn phụ kiện bảo vệ cho sản phẩm này.</div>`;
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1000);
+
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            });
+
+            // Payment method change handler
+            document.querySelectorAll('input[name="payment"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const paymentDetails = document.getElementById('paymentDetails');
+                    let content = '';
+
+                    switch (this.value) {
+                        case 'cod':
+                            content = '<div class="alert alert-info"><small><i class="fas fa-info-circle me-1"></i>Bạn sẽ thanh toán khi nhận hàng.</small></div>';
+                            break;
+                        case 'bank':
+                            content = `<div class="alert alert-warning">
+                            <small><i class="fas fa-university me-1"></i><strong>Thông tin chuyển khoản:</strong><br>
+                            Ngân hàng: Vietcombank<br>
+                            STK: 0123456789<br>
+                            Chủ TK: Công Nghệ Store VN</small>
+                        </div>`;
+                            break;
+                        case 'ewallet':
+                            content = '<div class="alert alert-success"><small><i class="fas fa-mobile-alt me-1"></i>Bạn sẽ được chuyển đến ví điện tử để thanh toán.</small></div>';
+                            break;
+                    }
+
+                    paymentDetails.innerHTML = content;
+                });
+            });
+
+            // Show chat notification
+            function showChatNotification() {
+                document.getElementById('chatNotification').style.display = 'block';
+            }
+
+            // Get payment method value
+            function getPaymentMethod() {
+                const checked = document.querySelector('input[name="payment"]:checked');
+                return checked ? checked.value : 'cod';
+            }
+
+            // Update payment method in customer form
+            document.getElementById('customerForm').addEventListener('submit', function(e) {
+                const paymentMethod = getPaymentMethod();
+                // Add payment method to hidden input or handle it in the form submission
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'paymentMethod';
+                hiddenInput.id = 'paymentMethod';
+                hiddenInput.value = paymentMethod;
+
+                // Remove existing hidden input if any
+                const existing = document.getElementById('paymentMethod');
+                if (existing) existing.remove();
+
+                this.appendChild(hiddenInput);
+            });
+
+            // Countdown Timer for Flash Sale
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const midnight = new Date();
+                midnight.setHours(24, 0, 0, 0);
+                const distance = midnight.getTime() - now;
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                const countdownElement = document.getElementById('countdown');
+                if (countdownElement) {
+                    countdownElement.innerHTML =
+                        String(hours).padStart(2, '0') + ':' +
+                        String(minutes).padStart(2, '0') + ':' +
+                        String(seconds).padStart(2, '0');
+                }
+
+                if (distance < 0) {
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "00:00:00";
+                    }
+                }
+            }
+
+            // Update countdown every second
+            setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call
+
+            // Newsletter subscription
+            function subscribeNewsletter(event) {
+                event.preventDefault();
+                const email = event.target.querySelector('input[type="email"]').value;
+
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ gửi thông tin khuyến mãi đến email: ' + email);
+                    event.target.reset();
+                }, 500);
+            }
+
+            // Make subscribeNewsletter globally available
+            window.subscribeNewsletter = subscribeNewsletter;
+        </script>
+</body>
+
+</html>

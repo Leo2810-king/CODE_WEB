@@ -1,0 +1,996 @@
+/* ===== GENERAL STYLES ===== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* ===== FLASH SALE BANNER ===== */
+
+.flash-sale-banner {
+    animation: flash 2s infinite;
+    background: linear-gradient(45deg, #ff6b35, #f7931e, #ff6b35) !important;
+    background-size: 200% 200%;
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.flash-sale-banner h5 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#countdown {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    min-height: 80px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+    padding: 0.75rem 0;
+}
+
+.navbar-brand:hover {
+    color: #667eea !important;
+}
+
+
+/* ===== LOGO IMAGES ===== */
+
+.logo-img {
+    height: 35px;
+    width: auto;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.logo-img-footer {
+    height: 25px;
+    width: auto;
+    border-radius: 4px;
+    filter: brightness(1.2);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.75rem 1rem !important;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #667eea !important;
+    background-color: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* ===== PRODUCT CARDS ===== */
+
+.product-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card .card-body {
+    padding: 1.5rem;
+}
+
+
+/* ===== CATEGORY ICONS ===== */
+
+.category-icon {
+    font-size: 3rem;
+    color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.category-icon:hover {
+    color: #764ba2;
+    transform: scale(1.1);
+}
+
+
+/* ===== PRICING ===== */
+
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+
+/* ===== FEATURE BOXES ===== */
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid #f8f9fa;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+    color: #764ba2;
+    transform: scale(1.1);
+}
+
+
+/* ===== TESTIMONIALS ===== */
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+    color: #ffc107;
+}
+
+
+/* ===== BUTTONS ===== */
+
+.btn {
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-outline-primary {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.btn-outline-primary:hover {
+    background-color: #667eea;
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+
+/* ===== CATEGORY FILTER BUTTONS ===== */
+
+.category-filter {
+    position: relative;
+    margin: 0 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-filter:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-color: transparent;
+    color: white !important;
+}
+
+.category-filter.active {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-color: transparent;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+.category-filter.active:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+}
+
+
+/* ===== SCROLL TO TOP ===== */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+
+/* ===== BADGES ===== */
+
+.badge {
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+}
+
+
+/* ===== CARDS ===== */
+
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* ===== FORMS ===== */
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+
+/* ===== NEWSLETTER SECTION ===== */
+
+.newsletter-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.newsletter-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #667eea !important;
+}
+
+
+/* ===== CAROUSEL ===== */
+
+.carousel-item img {
+    border-radius: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+
+/* ===== FLASH SALE BANNER ===== */
+
+.flash-sale-banner {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(243, 156, 18, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+    }
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .feature-box {
+        margin-bottom: 20px;
+    }
+    .category-icon {
+        font-size: 2rem;
+    }
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        margin-bottom: 20px;
+    }
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+/* ===== LOADING ANIMATION ===== */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+
+/* ===== HOVER EFFECTS ===== */
+
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+
+/* ===== GRADIENT TEXT ===== */
+
+.gradient-text {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+
+/* ===== CHAT BUBBLE ===== */
+
+.chat-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chat-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.chat-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+/* ===== TIMELINE FOR SHIPMENT TRACKING ===== */
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+    border-left: 2px solid #dee2e6;
+}
+
+.timeline-item.completed {
+    border-left-color: #28a745;
+}
+
+.timeline-item.active {
+    border-left-color: #ffc107;
+}
+
+.timeline-item:last-child {
+    border-left: none;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.timeline-content {
+    margin-left: 20px;
+}
+
+
+/* ===== RESPONSIVE PRODUCT GRID ===== */
+
+@media (min-width: 768px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .chat-bubble {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    .flash-sale-banner .col-md-4 {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+    .newsletter-section .col-lg-6:first-child {
+        text-align: center;
+    }
+    .category-icon {
+        padding: 15px;
+    }
+    .hover-zoom {
+        padding: 15px;
+    }
+}
+
+
+/* ===== FLASH SALE BANNER ===== */
+
+.flash-sale-banner {
+    animation: flash 2s infinite;
+    background: linear-gradient(45deg, #ff6b35, #f7931e, #ff6b35) !important;
+    background-size: 200% 200%;
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.flash-sale-banner h5 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#countdown {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+
+/* ===== CATEGORIES SECTION ===== */
+
+.gradient-text {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.category-icon {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover-zoom {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hover-zoom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hover-zoom:hover .category-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== TESTIMONIALS ===== */
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.testimonial-card img {
+    object-fit: cover;
+    border: 3px solid #667eea;
+}
+
+
+/* ===== NEWSLETTER SECTION ===== */
+
+.newsletter-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="2" fill="white" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="white" opacity="0.1"/></svg>');
+    z-index: 1;
+}
+
+.newsletter-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-form .form-control {
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+}
+
+.newsletter-form .btn {
+    padding: 15px 25px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== PRODUCT CARD ENHANCEMENTS ===== */
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-content {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #dc3545 !important;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ===== FORM VALIDATION STYLES ===== */
+
+.form-control.is-valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+
+/* ===== CATEGORIES SECTION ===== */
+
+.gradient-text {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.category-icon {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover-zoom {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hover-zoom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hover-zoom:hover .category-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== TESTIMONIALS ===== */
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.testimonial-card img {
+    object-fit: cover;
+    border: 3px solid #667eea;
+}
+
+
+/* ===== NEWSLETTER SECTION ===== */
+
+.newsletter-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="2" fill="white" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="white" opacity="0.1"/></svg>');
+    z-index: 1;
+}
+
+.newsletter-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-form .form-control {
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+}
+
+.newsletter-form .btn {
+    padding: 15px 25px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
